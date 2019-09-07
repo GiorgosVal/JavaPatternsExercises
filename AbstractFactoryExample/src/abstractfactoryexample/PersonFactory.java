@@ -9,16 +9,18 @@ package abstractfactoryexample;
  *
  * @author giorgos
  */
-public class CarFactory extends AbstractFactory {
+public class PersonFactory extends AbstractFactory {
 
     @Override
-    public Car createCar(CarType carType) {
-        return CarMapping.carMapping.get(carType);
+    Car createCar(CarType carType) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     Person createPerson(PersonType personType) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return PersonMapping.personMapping.get(personType);
     }
-
+    
+    
+    
 }

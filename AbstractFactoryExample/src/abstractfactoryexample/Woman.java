@@ -9,6 +9,15 @@ package abstractfactoryexample;
  *
  * @author giorgos
  */
-public enum PersonType {
-    MAN, WOMAN, CHILD
+public class Woman extends Person {
+    
+    public Woman(String name, int age) {
+        super(name, age);
+    }
+
+    @Override
+    void musclePower() {
+        System.out.println("A woman is weacker than a man.");
+    }
+    
 }

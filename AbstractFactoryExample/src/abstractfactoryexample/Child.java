@@ -9,12 +9,15 @@ package abstractfactoryexample;
  *
  * @author giorgos
  */
-public interface Factory {
-    Car createCar(CarType carType);
+public class Child extends Person {
     
-    static Car getCarFactory(CarType carType) {
-        CarFactory f = new CarFactory();
-        return f.createCar(carType);
+    public Child(String name, int age) {
+        super(name, age);
+    }
+
+    @Override
+    void musclePower() {
+        System.out.println("A child has little muscle power.");
     }
     
 }

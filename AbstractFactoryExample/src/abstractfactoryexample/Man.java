@@ -9,6 +9,15 @@ package abstractfactoryexample;
  *
  * @author giorgos
  */
-public class Man {
+public class Man extends Person {
+    
+    public Man(String name, int age) {
+        super(name, age);
+    }
+
+    @Override
+    void musclePower() {
+        System.out.println("A man is strong.");
+    }
     
 }
