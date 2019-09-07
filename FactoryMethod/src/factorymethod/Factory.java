@@ -11,4 +11,10 @@ package factorymethod;
  */
 public interface Factory {
     Car createCar(CarType carType);
+    
+    static Car getCarFactory(CarType carType) {
+        CarFactory f = new CarFactory();
+        return f.createCar(carType);
+    }
+    
 }
