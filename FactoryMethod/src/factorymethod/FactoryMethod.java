@@ -5,6 +5,9 @@
  */
 package factorymethod;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author giorgos
@@ -15,7 +18,14 @@ public class FactoryMethod {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        CarFactory factory = new CarFactory();
+        Car ferrari = factory.createCar(CarType.FERRARI);
+        Car fiat = factory.createCar(CarType.FIAT);
+
+        ferrari.speedUp();
+        fiat.speedUp();
+
     }
-    
+
 }
