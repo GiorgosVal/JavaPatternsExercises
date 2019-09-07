@@ -49,4 +49,9 @@ Also provides a static method getCarFactory() that creates a new CarFactory and
 returns a Car object.
 
 
+NOTICE: In this example we used the CarMapping class in order to create a mapping
+for each CarType. We use this mapping in order to avoid the multiple if/else
+blocks inside the createCar method of CarFactory class.
+
+
  */
