@@ -18,7 +18,12 @@ public class FactoryMethod {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        CarMapping cars = new CarMapping();
+        cars.addMapping(CarType.FERRARI, new Ferrari("Ferrari", 2000, "Red", true));
+        cars.addMapping(CarType.FIAT, new Fiat("Fiat", 2000, "Blue", true));
 
+        
         Car ferrari = Factory.getCarFactory(CarType.FERRARI);
         Car fiat = Factory.getCarFactory(CarType.FIAT);
         ferrari.speedUp();
